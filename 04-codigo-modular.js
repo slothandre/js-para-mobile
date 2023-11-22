@@ -1,5 +1,5 @@
 // 04-codigo-modular.js
-import pessoa from "./modulos/dados.js";
+import {pessoa} from "./modulos/dados.js";
 
 console.log(pessoa);
 console.log(pessoa.nome);
