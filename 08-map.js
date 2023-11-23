@@ -32,7 +32,7 @@ E mostre no console. */
 const valoresBlackFriday = cursos.map(curso => curso.preco * 0.9);
 console.log(valoresBlackFriday);
 
-const cursosAtualizados = cursos.map((curso) => {
+const cursosAtualizados = cursos.map(curso => {
     return {
         ...curso,
         preco: curso.preco * 0.9
