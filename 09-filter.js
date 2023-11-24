@@ -21,9 +21,10 @@ const alunos = [
 
 console.log(alunos);
 
-const resultados = alunos.filter(aluno => {
-    // return aluno.startsWith("M") || aluno.startsWith("m");
-    return aluno.startsWith("M") && aluno.endsWith("o");
-});
+// Filtrando alunos que começam com "M" e terminam com "o"
+// Obs.: faz diferença usar maiúsculas ou minúsculas
+const resultados = alunos.filter(aluno => aluno.startsWith("M") && aluno.endsWith("o"));
 
 console.log(resultados);
+
+console.log("--------------------");
