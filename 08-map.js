@@ -39,3 +39,11 @@ const cursosAtualizados = cursos.map(curso => {
     }
 });
 console.log(cursosAtualizados);
+
+/* Simplificar a arrow function: é necessário
+envolver o código de return implícito com parênteses. */
+const cursosBlackFriday2 = cursos.map( curso => 
+    ({ ...curso, preco: curso.preco - curso.preco * 0.10 })
+);
+
+console.log(cursosBlackFriday2);
