@@ -40,3 +40,15 @@ console.log(cursosDesign);
 // Filtrando por cursos que NÃO SÃO da categoria Design
 const cursosMenosDesign = cursos.filter(curso => curso.categoria !== "Design");
 console.log(cursosMenosDesign);
+
+/* Gere um novo array com os cursos que atendam os seguintes critérios:
+- Categorias Front-End e Mobile
+- Preços acima de 600 */
+
+const cursosMalucos = cursos.filter(curso => (curso.categoria === "Front-End" || curso.categoria === "Mobile") && curso.preco >= 600);
+console.log(cursosMalucos);
+
+const cursosMaisMalucos = cursos
+                            .filter(curso => curso.categoria === "Mobile")
+                            .map(curso => curso.titulo);
+console.log(cursosMaisMalucos);
