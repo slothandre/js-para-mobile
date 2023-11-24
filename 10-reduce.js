@@ -1,4 +1,5 @@
 // 10-reduce.js
+import cursos from "./modulos/cursos.js";
 
 /* reduce (reduzir, redução)
 Passa por elementos de um array (usando uma função
@@ -28,3 +29,18 @@ for(let valor of valores) {
     acumuladora2 += valor;
 }
 console.log(acumuladora2);
+
+console.log("--------------");
+console.log(cursos);
+
+/* Exercício: faça a soma dos preços de todos os cursos */
+const somaPrecos = cursos.reduce((acumulador, curso) => {
+    return acumulador + curso.preco;
+}, 0);
+console.log(`A soma do valor de todos os cursos é ${somaPrecos}`);
+
+/* Desafio: faça a soma dos preços dos cursos de Front e Back-End */
+const somaPrecosFB = cursos
+                        .filter(curso => curso.categoria === "Front-End" || curso.categoria === "Back-End")
+                        .reduce((acumulador, curso) => (acumulador + curso.preco), 0)
+console.log(`A soma do valor dos cursos de Front e Back-End é ${somaPrecosFB}`);
