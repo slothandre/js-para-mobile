@@ -8,6 +8,7 @@ const vendas = [1500, 3000, 1000, 500, 750, 5000, 2000];
 const meta = 1000;
 console.log(vendas);
 
+// 09-filter.js
 // Gerando um array com os valores que bateram a meta
 const vendasAcimaDaMeta = vendas.filter( (venda) => {
     return venda >= meta
